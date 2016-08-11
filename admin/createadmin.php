@@ -40,18 +40,16 @@ if ($pw1 != $pw2) {
 
         //Tries inserting into database and add response to variable
 
-        $a = new NewUserForm;
+        $a = new NewAdminForm;
 
-        $response = $a->createUser($fname,$lname, $newuser, $newid, $newemail, $newpw);
+        $response = $a->createAdmin($fname,$lname, $newuser, $newid, $newemail, $newpw);
 
         //Success
         if ($response == 'true') {
 
-            echo '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'. $signupthanks .'</div><div id="returnVal" style="display:none;">true</div>';
+            echo '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>admin created with success</div><div id="returnVal" style="display:none;">true</div>';
 
-            //Send verification email
-            $m = new MailSender;
-            $m->sendMail($admin_email, $newuser, $newid, 'Verify');
+           
 
         } else {
             //Failure

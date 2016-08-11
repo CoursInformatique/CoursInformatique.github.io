@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['username'])) {
-    header("location:../pages/accueil.php");
+    header("location:adminspace.php");
 }
 ?>
 <!DOCTYPE html>
@@ -17,9 +17,9 @@ if (isset($_SESSION['username'])) {
 
   <body>
     <div class="container">
-      <form class="form-signin" name="form1" method="post" action="checklogin.php">
 
-        <h2 class="form-signin-heading">Connexion</h2>
+      <form class="form-signin" name="form1" method="post" action="checkloginadmin.php">
+        <h2 class="form-signin-heading">Connexion ADMIN</h2>
         <input name="myusername" id="myusername" type="text" class="form-control" placeholder="Nom d'utilisateur" autofocus>
         <input name="mypassword" id="mypassword" type="password" class="form-control" placeholder="Mot de passe">
         <!-- The checkbox remember me is not implemented yet...-->
@@ -27,7 +27,7 @@ if (isset($_SESSION['username'])) {
           <input type="checkbox" value="remember-me"> Se souvenir de moi
         </label>
         <button name="Submit" id="submit" class="btn btn-lg btn-primary btn-block" type="submit">Se connecter</button>
-	 <h4><a href="signup.php">S'inscrire</a></h4>
+	 <!--h4><a href="signupadmin.php">S'inscrire</a></h4-->
         <div id="message"></div>
       </form>
 
@@ -38,7 +38,7 @@ if (isset($_SESSION['username'])) {
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="../js/bootstrap.js"></script>
     <!-- The AJAX login script -->
-    <script src="../js/login.js"></script>
+    <script src="../js/loginadmin.js"></script>
 
   </body>
 </html>

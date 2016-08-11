@@ -8,8 +8,8 @@
   </head>
   <body>
 <?php
-require 'includes/functions.php';
-include 'config.php';
+require '../includes/functions.php';
+include '../config/config.php';
 
 //Pulls variables from url. Can pass 1 (verified) or 0 (unverified/blocked) into url
 $uid = $_GET['uid'];

@@ -2,7 +2,7 @@
 //DO NOT ECHO ANYTHING ON THIS PAGE OTHER THAN RESPONSE
 //'true' triggers login success
 ob_start();
-require '../config/config.php';
+include '../config/config.php';
 require '../includes/functions.php';
 
 // Define $myusername and $mypassword
@@ -14,7 +14,7 @@ $username = stripslashes($username);
 $password = stripslashes($password);
 
 $response = '';
-$loginCtl = new LoginForm;
+$loginCtl = new LoginFormAdmin;
 $conf = new GlobalConf;
 $lastAttempt = checkAttempts($username);
 $max_attempts = $conf->max_attempts;
